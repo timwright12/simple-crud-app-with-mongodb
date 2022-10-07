@@ -29,11 +29,11 @@ deleteButton.addEventListener('click', () => {
   .then(res => {
     if (res.ok) return res.json()
   })
-    .then(res => {
-      if (res === 'No quote to delete') {
-        messageDiv.textContent = 'No Darth Vader quote to delete'
-      } else {
-        window.location.reload(true)
-      }
-    })
-})
+  .then(res => {
+    if (res === 'No quote to delete') {
+      messageDiv.textContent = 'No Darth Vader quote to delete'
+    } else {
+      window.location.reload(true)
+    }
+  });
+});

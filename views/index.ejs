@@ -2,37 +2,12 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>Star Wars Quote App</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-      h1 {
-        border-bottom: 1px solid #999;
-        padding: 0 0 .5rem;
-      }
+    <title>Home | Quote Manager</title>
 
-      h2, form {
-        margin: 0 0 1rem;
-      }
-
-      form {
-        margin-bottom: 2rem;
-      }
-
-      form div {
-        margin: 0 0 .5rem;
-      }
-      .col {
-        box-sizing: border-box;
-        padding: 0 1rem 2rem;
-      }
-      @media screen and ( min-width: 700px ) {
-        .col {
-          width: 33.333333%;
-          float: left;
-        }
-      }
-
-    </style>
+    <link rel="stylesheet" href="/css/style.css" />
 
   </head>
   <body>
@@ -56,6 +31,7 @@
 
       <h2> Quotes </h2>
 
+      <% if(quotes.length > 0){ %>
       <ul>
         <!-- Loop through quotes -->
         <% for(var i = 0; i < quotes.length; i++) {%>
@@ -67,6 +43,9 @@
           </li>
         <% } %>
       </ul>
+      <% } else { %>
+      <a>No quotes yet! <a href="#name">Submit the first quote.</a></p>
+      <% } %>
     </div>
 
     <div class="col">
@@ -83,7 +62,7 @@
       <div id="message" aria-atomic="true" aria-live="polite"></div>
     </div>
 
-    <script src="/main.js"></script>
+    <script src="/js/main.js"></script>
 
   </body>
 </html>

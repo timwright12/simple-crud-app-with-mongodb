@@ -1,0 +1,26 @@
+h1 {
+  border-bottom: 1px solid #999;
+  padding: 0 0 .5rem;
+}
+
+h2, form {
+  margin: 0 0 1rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+form div {
+  margin: 0 0 .5rem;
+}
+.col {
+  box-sizing: border-box;
+  padding: 0 1rem 2rem;
+}
+@media screen and ( min-width: 700px ) {
+  .col {
+    width: 33.333333%;
+    float: left;
+  }
+}
